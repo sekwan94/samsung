@@ -1,0 +1,409 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+}
+
+#header {
+    width: 100%;
+    background: #fff;
+}
+
+.h_inner {
+    max-width: 1395px;
+    height: 80px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.h_inner h1 a {
+    padding: 31px 0;
+}
+
+.h_inner h1 a img {
+    height: 18px;
+}
+
+.h_inner .gnb {
+    width: 690px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.h_inner .gnb li a {
+    color: #000;
+    font-weight: bold;
+    letter-spacing: -2px;
+    position: relative;
+}
+
+.h_inner .gnb li a::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #000;
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    transition: all 0.2s ease;
+    transform: translateX(-50%);
+
+}
+
+.h_inner .gnb li a:hover::after {
+    width: 100%;
+}
+
+.h_inner .gnb li a img {
+    margin-left: 5px;
+}
+
+.h_inner .gnb li:nth-child(6) a img {
+    margin-left: 0;
+}
+
+.h_inner .r_gnb {
+    width: 125px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.h_inner .r_gnb li a {
+    padding: 31px 0;
+}
+
+.h_inner .r_gnb li a img {
+    vertical-align: middle;
+    width: 26px;
+}
+.tab_menu{
+    display: none;
+}
+
+#main {
+    width: 100%;
+    position: relative;
+}
+
+/* ------------------ 슬라이드 ----------------- */
+
+#main .visual>div>div>div {
+    position: relative;
+}
+
+#main .visual .txt {
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#main .visual .txt .txt_top {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#main .visual .txt h2 {
+    font-size: 3.6em;
+    color: #000;
+    font-weight: bold;
+    letter-spacing: -1px;
+}
+
+#main .visual .txt p {
+    font-size: 15px;
+    color: #000;
+    margin: 32px 0 45px;
+}
+
+#main .visual .txt a {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: bold;
+    border-bottom: 2px solid #000;
+    color: #000;
+    padding: 3px 0;
+    margin-right: 15px;
+}
+
+#main .visual .txt a:last-child {
+    color: #fff;
+    background: #000;
+    border-radius: 25px;
+    display: inline-block;
+    padding: 5px 20px;
+    text-align: center;
+    line-height: 25px;
+}
+
+
+
+#main .visual .slick-prev {
+    position: absolute;
+    left: 3%;
+    top: 50%;
+    background: url("../images/icon-slick-prev-compo.svg") no-repeat;
+    width: 22px;
+    height: 40px;
+    background-size: 22px 40px;
+    z-index: 100;
+    border: none;
+    text-indent: -99999px;
+    cursor: pointer;
+}
+
+#main .visual .slick-prev.on {
+    background: url("../images/icon-slick-prev-compo-wht.svg") no-repeat;
+}
+
+#main .visual .slick-next {
+    position: absolute;
+    right: 3%;
+    top: 50%;
+    background: url("../images/icon-slick-next-compo.svg") no-repeat;
+    width: 22px;
+    height: 40px;
+    background-size: 22px 40px;
+    z-index: 100;
+    border: none;
+    text-indent: -99999px;
+    cursor: pointer;
+}
+
+#main .visual .slick-next.on {
+    background: url("../images/icon-slick-next-compo-wht.svg") no-repeat;
+}
+
+#main .visual .slick-dots {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 50px;
+    /* border: 1px solid red; */
+    width: 100%;
+    text-align: center;
+}
+
+#main .visual .slick-dots li {
+    display: inline-block;
+    margin: 0 16px;
+    position: relative;
+}
+
+#main .visual .slick-dots li:first-child {
+    margin-left: 0;
+}
+
+#main .visual .slick-dots li:last-child {
+    margin-right: 0;
+}
+
+#main .visual .slick-dots li::before {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    font-weight: bold;
+    text-align: center;
+}
+
+#main .visual .slick-dots li:first-child::before {
+    content: '공동구매';
+    font-size: 13px;
+    cursor: pointer;
+}
+
+#main .visual .slick-dots li:nth-child(2)::before {
+    content: '갤럭시 Z 플립3비스포크 스튜디오';
+    width: 110px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+#main .visual .slick-dots li:nth-child(3)::before {
+    content: '갤럭시 워치4비스포크 스튜디오';
+    width: 110px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+#main .visual .slick-dots li:nth-child(4)::before {
+    content: 'Galaxy Book';
+    width: 110px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+#main .visual .slick-dots li:nth-child(5)::before {
+    content: 'BESPOKE 큐커';
+    width: 110px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+#main .visual .slick-dots li:nth-child(6)::before {
+    content: 'NEO QLED';
+    width: 110px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+#main .visual .slick-dots li:nth-child(7)::before {
+    content: 'BESPOKE 냉장고 | 김치냉장고';
+    width: 110px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+#main .visual .slick-dots li:nth-child(8)::before {
+    content: 'Team Samsung';
+    width: 110px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+#main .visual .slick-dots .fff::before {
+    color: #fff
+}
+
+#main .visual .slick-dots li button {
+    cursor: pointer;
+    text-indent: -99999px;
+    border: none;
+    background: rgba(0, 0, 0, 0.4);
+    width: 114px;
+    height: 2px;
+    position: relative;
+    outline: none;
+}
+
+#main .visual .slick-dots .fff button {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+#main .visual .slick-dots .slick-active button {}
+
+#main .visual .slick-dots .slick-active button::before {
+    content: '';
+    width: 114px;
+    height: 2px;
+    background: rgba(0, 0, 0, 1);
+    position: absolute;
+    left: 0;
+    top: 0;
+    animation: page_ani 5s;
+}
+
+#main .visual .slick-dots .slick-active.fff button::before {
+    content: '';
+    width: 114px;
+    height: 2px;
+    background: rgba(255, 255, 255, 1);
+    position: absolute;
+    left: 0;
+    top: 0;
+    animation: page_ani 5s;
+}
+
+@keyframes page_ani {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+.btn_stop {
+    position: absolute;
+    bottom: 57px;
+    right: 50%;
+    text-indent: -99999px;
+    border: none;
+    transform: translateX(-50%);
+    margin-right: -610px;
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    background: url(../images/icon-slick-pause-sml.svg) no-repeat;
+}
+
+.btn_stop.on {
+    background: url(../images/icon-slick-play-sml.svg) no-repeat;
+}
+
+.btn_stop.fff {
+    background: url(../images/icon-slick-pause-sml-wht.svg) no-repeat;
+}
+
+.btn_stop.fff.on {
+    background: url(../images/icon-slick-play-sml-wht.svg) no-repeat;
+}
+
+/* 카운트다운 */
+.txt_buy {
+    margin-top: 100px;
+}
+
+.countdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    top: 170px;
+}
+
+.clock_section {
+    display: inline-block;
+    text-align: center;
+    margin: 30px 0 0;
+    padding: 0 10px;
+}
+
+.clock_section .value {
+    text-align: center;
+    font-size: 52px;
+    display: inline-block;
+    position: relative;
+    color: #000;
+    font-weight: bold;
+}
+
+.clock_section .value::before {
+    content: ':';
+    font-size: 52px;
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-55%);
+    color: #000;
+    font-weight: bold;
+}
+
+.clock1 {
+    margin-left: -10px;
+}
+
+.countdown2 {
+    top: 200px
+}
+
+.clock_section #days::before {
+    display: none;
+}
+
+.clock_section #days2::before {
+    display: none;
+}
+
+.clock_section h3 {
+    font-size: 16px;
+    color: #000;
+    margin: 8px 0 0;
+}
